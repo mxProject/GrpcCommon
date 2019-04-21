@@ -1,0 +1,1568 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mxProject.Helpers.GrpcCommon</name>
+    </assembly>
+    <members>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.AsyncClientStreamingCall`2"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.WriteRequestsAsync``2(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified requests.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.WriteRequestsAsync``2(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified requests.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.WriteRequestsAndCompleteAsync``2(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Write the specified requests and send a completion.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns>The response.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.WriteRequestsAndCompleteAsync``2(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Write the specified requests and send a completion.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns>The response.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequest``3(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,``1})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequest``3(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertResponse``3(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Func{``1,``2})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertResponse``3(Grpc.Core.AsyncClientStreamingCall{``0,``1},System.Func{``1,System.Threading.Tasks.Task{``2}})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,``1},System.Func{``2,``3})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}},System.Func{``2,``3})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,``1},System.Func{``2,System.Threading.Tasks.Task{``3}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncClientStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncClientStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}},System.Func{``2,System.Threading.Tasks.Task{``3}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.AsyncClientStreamingCall`2"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndReadAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified requests and reads the responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns>The responses.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndReadAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified requests and reads the responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <returns>The responses.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndFillAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IList{``1})">
+            <summary>
+            Writes the specified requests and reads the responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="buffer">The collection that stores readed responses.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndFillAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Collections.Generic.IList{``1})">
+            <summary>
+            Writes the specified requests and reads the responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="buffer">The collection that stores readed responses.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndForEachAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0},System.Action{``1})">
+            <summary>
+            Writes the specified requests and executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="onResponse">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndForEachAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Action{``1})">
+            <summary>
+            Writes the specified requests and executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="onResponse">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndForEachAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{``0},System.Func{``1,System.Threading.Tasks.Task})">
+            <summary>
+            Writes the specified requests and executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="onResponse">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.WriteAllAndForEachAsync``2(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Func{``1,System.Threading.Tasks.Task})">
+            <summary>
+            Writes the specified requests and executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requests">The requests.</param>
+            <param name="onResponse">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequest``3(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,``1})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequest``3(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A streaming call with request type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertResponse``3(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Func{``1,``2})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertResponse``3(Grpc.Core.AsyncDuplexStreamingCall{``0,``1},System.Func{``1,System.Threading.Tasks.Task{``2}})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,``1},System.Func{``2,``3})">
+            <summary>
+            Converts the request and reponse type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}},System.Func{``2,``3})">
+            <summary>
+            Converts the request and reponse type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,``1},System.Func{``2,System.Threading.Tasks.Task{``3}})">
+            <summary>
+            Converts the request and reponse type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncDuplexStreamingCallExtensions.ConvertRequestResponse``4(Grpc.Core.AsyncDuplexStreamingCall{``1,``2},System.Func{``0,System.Threading.Tasks.Task{``1}},System.Func{``2,System.Threading.Tasks.Task{``3}})">
+            <summary>
+            Converts the request and reponse type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with request and response type converted.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.AsyncServerStreamingCall`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.ReadAllAsync``1(Grpc.Core.AsyncServerStreamingCall{``0})">
+            <summary>
+            Reads all responses.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <returns>The responses </returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.FillAllAsync``1(Grpc.Core.AsyncServerStreamingCall{``0},System.Collections.Generic.IList{``0})">
+            <summary>
+            Reads all responses.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="buffer">The collection that stores readed responses.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.ForEachAsync``1(Grpc.Core.AsyncServerStreamingCall{``0},System.Action{``0})">
+            <summary>
+            Executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="action">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.ForEachAsync``1(Grpc.Core.AsyncServerStreamingCall{``0},System.Func{``0,System.Threading.Tasks.Task})">
+            <summary>
+            Executes the specified method on the readed responses.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="call"></param>
+            <param name="asyncAction">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.ConvertResponse``2(Grpc.Core.AsyncServerStreamingCall{``0},System.Func{``0,``1})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncServerStreamingCallExtensions.ConvertResponse``2(Grpc.Core.AsyncServerStreamingCall{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.AsyncUnaryCallExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.AsyncUnaryCall`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncUnaryCallExtensions.ConvertResponse``2(Grpc.Core.AsyncUnaryCall{``0},System.Func{``0,``1})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.AsyncUnaryCallExtensions.ConvertResponse``2(Grpc.Core.AsyncUnaryCall{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the reponse type.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="call"></param>
+            <param name="responseConverter">Method to convert a response.</param>
+            <returns>A streaming call with response type converted.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.CallInvoker"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions.StructBlockingUnaryCall``2(Grpc.Core.CallInvoker,Grpc.Core.Method{``0,``1},System.String,Grpc.Core.CallOptions,``0)">
+            <summary>
+            Invokes BlockingUnaryCall without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="callInvoker"></param>
+            <param name="method"></param>
+            <param name="host"></param>
+            <param name="options"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions.StructAsyncUnaryCall``2(Grpc.Core.CallInvoker,Grpc.Core.Method{``0,``1},System.String,Grpc.Core.CallOptions,``0)">
+            <summary>
+            Invokes AsyncUnaryCall without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="callInvoker"></param>
+            <param name="method"></param>
+            <param name="host"></param>
+            <param name="options"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions.StructAsyncClientStreamingCall``2(Grpc.Core.CallInvoker,Grpc.Core.Method{``0,``1},System.String,Grpc.Core.CallOptions)">
+            <summary>
+            Invokes AsyncClientStreamingCall without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="callInvoker"></param>
+            <param name="method"></param>
+            <param name="host"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions.StructAsyncServerStreamingCall``2(Grpc.Core.CallInvoker,Grpc.Core.Method{``0,``1},System.String,Grpc.Core.CallOptions,``0)">
+            <summary>
+            Invokes AsyncServerStreamingCall without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="callInvoker"></param>
+            <param name="method"></param>
+            <param name="host"></param>
+            <param name="options"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallInvokerExtensions.StructAsyncDuplexStreamingCall``2(Grpc.Core.CallInvoker,Grpc.Core.Method{``0,``1},System.String,Grpc.Core.CallOptions)">
+            <summary>
+            Invokes AsyncDuplexStreamingCall without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="callInvoker"></param>
+            <param name="method"></param>
+            <param name="host"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.CallOptions"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.AddHeader(Grpc.Core.CallOptions,System.String,System.String)">
+            <summary>
+            Adds the specified header. Nothing is done if it has already been set.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The haeder key representing a token string.</param>
+            <param name="value">The string value.</param>
+            <returns>A new callOptions.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.AddHeader(Grpc.Core.CallOptions,System.String,System.Byte[])">
+            <summary>
+            Adds the specified header. Nothing is done if it has already been set.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The haeder key representing a token string.</param>
+            <param name="value">The binary value.</param>
+            <returns>A new callOptions.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.SetHeader(Grpc.Core.CallOptions,System.String,System.String)">
+            <summary>
+            Sets the specified header.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The haeder key representing a token string.</param>
+            <param name="value">The string value.</param>
+            <returns>A new callOptions.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.SetHeader(Grpc.Core.CallOptions,System.String,System.Byte[])">
+            <summary>
+            Sets the specified header.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The haeder key representing a token string.</param>
+            <param name="value">The binary value.</param>
+            <returns>A new callOptions.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.ContainsHeader(Grpc.Core.CallOptions,System.String)">
+            <summary>
+            Gets a value indicating whether the specified key is included. This method uses the brute force algorithm.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The haeder key.</param>
+            <returns>true if the key is contained; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.GetHeaderStringValue(Grpc.Core.CallOptions,System.String)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The key.</param>
+            <returns>The value. If the key is not found, returns null.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.CallOptionsExtensions.GetHeaderBinaryValue(Grpc.Core.CallOptions,System.String)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="callOptions"></param>
+            <param name="headerKey">The key.</param>
+            <returns>The value. If the key is not found, returns null.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.IClientStreamWriter`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.WriteRequestsAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified requests.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.WriteRequestsAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified requests.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.WriteRequestsAndCompleteAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified requests and send a completion.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.WriteRequestsAndCompleteAsync``1(Grpc.Core.IClientStreamWriter{``0},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified requests and send a completion.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requests">The requests.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.ConvertRequest``2(Grpc.Core.IClientStreamWriter{``1},System.Func{``0,``1})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A stream writer to write a converted request.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ClientStreamWriterExtensions.ConvertRequest``2(Grpc.Core.IClientStreamWriter{``1},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a request.</param>
+            <returns>A stream writer to write a converted request.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.IAsyncStreamReader`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.ReadAllAsync``1(Grpc.Core.IAsyncStreamReader{``0})">
+            <summary>
+            Reads all objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamReader"></param>
+            <returns>The responses.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.FillAllAsync``1(Grpc.Core.IAsyncStreamReader{``0},System.Collections.Generic.IList{``0})">
+            <summary>
+            Reads all objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamReader"></param>
+            <param name="buffer">The collection that stores readed objects.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},System.Action{``0})">
+            <summary>
+            Executes the specified method on the readed objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamReader"></param>
+            <param name="action">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.ForEachAsync``1(Grpc.Core.IAsyncStreamReader{``0},System.Func{``0,System.Threading.Tasks.Task})">
+            <summary>
+            Executes the specified method on the readed objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamReader"></param>
+            <param name="asyncAction">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.Convert``2(Grpc.Core.IAsyncStreamReader{``0},System.Func{``0,``1})">
+            <summary>
+            Converts the readed object type.
+            </summary>
+            <typeparam name="T">The type of the readed object.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="streamReader"></param>
+            <param name="converter">Method to convert the object.</param>
+            <returns>A stream reader that returns the converted object.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamReaderExtensions.Convert``2(Grpc.Core.IAsyncStreamReader{``0},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the readed object type.
+            </summary>
+            <typeparam name="T">The type of the readed object.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+            <param name="streamReader"></param>
+            <param name="converter">Method to convert the object.</param>
+            <returns>A stream reader that returns the converted object.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamWriterExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.IAsyncStreamWriter`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamWriterExtensions.WritesAsync``1(Grpc.Core.IAsyncStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="objects">The objects.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamWriterExtensions.WritesAsync``1(Grpc.Core.IAsyncStreamWriter{``0},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="objects">The objects.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamWriterExtensions.Convert``2(Grpc.Core.IAsyncStreamWriter{``1},System.Func{``0,``1})">
+            <summary>
+            Converts the object type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a object.</param>
+            <returns>A stream writer to write a converted object.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IAsyncStreamWriterExtensions.Convert``2(Grpc.Core.IAsyncStreamWriter{``1},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a object.</param>
+            <returns>A stream writer to write a converted object.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamReader`2">
+            <summary>
+            Stream reader that returns converted objects.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamReader`2.#ctor(Grpc.Core.IAsyncStreamReader{`0},System.Func{`0,System.Threading.Tasks.Task{`1}})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamReader">The stream reader.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamReader`2.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamReader`2.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamReader`2.MoveNext(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamWriter`2">
+            <summary>
+            Stream writer to write converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="T">The type of the object.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamWriter`2.#ctor(Grpc.Core.IAsyncStreamWriter{`1},System.Func{`0,System.Threading.Tasks.Task{`1}})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncStreamWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertClientStreamWriter`2">
+            <summary>
+            Stream writer that writes converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertClientStreamWriter`2.#ctor(Grpc.Core.IClientStreamWriter{`1},System.Func{`0,System.Threading.Tasks.Task{`1}})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertClientStreamWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertClientStreamWriter`2.CompleteAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertClientStreamWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncServerWriter`2">
+            <summary>
+            Stream writer to write converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncServerWriter`2.#ctor(Grpc.Core.IAsyncStreamWriter{`1},System.Func{`0,System.Threading.Tasks.Task{`1}})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncServerWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.AsyncConvertAsyncServerWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamReader`2">
+            <summary>
+            Stream reader that returns converted objects.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <typeparam name="TResult">The type after conversion.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamReader`2.#ctor(Grpc.Core.IAsyncStreamReader{`0},System.Func{`0,`1})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamReader">The stream reader.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamReader`2.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamReader`2.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamReader`2.MoveNext(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamWriter`2">
+            <summary>
+            Stream writer to write converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="T">The type of the object.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamWriter`2.#ctor(Grpc.Core.IAsyncStreamWriter{`1},System.Func{`0,`1})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertAsyncStreamWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertClientStreamWriter`2">
+            <summary>
+            Stream writer that writes converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertClientStreamWriter`2.#ctor(Grpc.Core.IClientStreamWriter{`1},System.Func{`0,`1})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertClientStreamWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertClientStreamWriter`2.CompleteAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertClientStreamWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertServerStreamWriter`2">
+            <summary>
+            Stream writer to write converted objects.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertServerStreamWriter`2.#ctor(Grpc.Core.IAsyncStreamWriter{`1},System.Func{`0,`1})">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="streamWriter">The stream writer.</param>
+            <param name="converter">Conversion method.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertServerStreamWriter`2.WriteOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.ConvertServerStreamWriter`2.WriteAsync(`0)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.Internals.StructMethodCache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.Internals.StructMethodCache.GetMethod``2(Grpc.Core.Method{``0,``1})">
+            <summary>
+            Get the method definition to send byte array and receive byte array.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="method">The method.</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.IServerStreamWriterExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.IServerStreamWriter`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IServerStreamWriterExtensions.WritesAsync``1(Grpc.Core.IServerStreamWriter{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Writes the specified objects.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="responses">The responses.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IServerStreamWriterExtensions.WritesAsync``1(Grpc.Core.IServerStreamWriter{``0},System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Writes the specified objects.
+            </summary>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="responses">The responses.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IServerStreamWriterExtensions.ConvertResponse``2(Grpc.Core.IServerStreamWriter{``1},System.Func{``0,``1})">
+            <summary>
+            Converts the object type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a response.</param>
+            <returns>A stream writer to write a source object.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.IServerStreamWriterExtensions.ConvertResponse``2(Grpc.Core.IServerStreamWriter{``1},System.Func{``0,System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Converts the request type.
+            </summary>
+            <typeparam name="TSource">The type before conversion.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="streamWriter"></param>
+            <param name="requestConverter">Method to convert a response.</param>
+            <returns>A stream writer to write a source object.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions">
+            <summary>
+            Extention methods of <see cref="T:Grpc.Core.Metadata"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.ContainsKey(Grpc.Core.Metadata,System.String)">
+            <summary>
+            Gets a value indicating whether the specified key is included. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <returns>true if the key is contained; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.IndexOf(Grpc.Core.Metadata,System.String)">
+            <summary>
+            Gets the index associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <returns>Index if the key is contained; otherwise -1.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.TryGetStringValue(Grpc.Core.Metadata,System.String,System.String@)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>true if the key is found; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.TryGetBinaryValue(Grpc.Core.Metadata,System.String,System.Byte[]@)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>true if the key is found; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.GetStringValueOrNull(Grpc.Core.Metadata,System.String)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <returns>The value. If the key is not found, returns null.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.GetBinaryValueOrNull(Grpc.Core.Metadata,System.String)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <returns>The value. If the key is not found, returns null.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.GetStringValueOrDefault(Grpc.Core.Metadata,System.String,System.String)">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="defaultValue">The default value when the key is not found.</param>
+            <returns>The value. If the key is not found, returns <paramref name="defaultValue"/>.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.GetBinaryValueOrDefault(Grpc.Core.Metadata,System.String,System.Byte[])">
+            <summary>
+            Gets the value associated with the specified key. This method uses the brute force algorithm.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="defaultValue">The default value when the key is not found.</param>
+            <returns>The value. If the key is not found, returns <paramref name="defaultValue"/>.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.IsSameKey(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.SetStringValue(Grpc.Core.Metadata,System.String,System.String)">
+            <summary>
+            Sets the specified key and value.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The string value.</param>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.SetBinaryValue(Grpc.Core.Metadata,System.String,System.Byte[])">
+            <summary>
+            Sets the specified key and value.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The binary value.</param>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.AddStringValue(Grpc.Core.Metadata,System.String,System.String)">
+            <summary>
+            Sets the specified key and value. Nothing is done if it has already been set.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The string value.</param>
+            <returns>true if it added; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.AddBinaryValue(Grpc.Core.Metadata,System.String,System.Byte[])">
+            <summary>
+            Sets the specified key and value. Nothing is done if it has already been set.
+            </summary>
+            <param name="metadata"></param>
+            <param name="key">The key.</param>
+            <param name="value">The binary value.</param>
+            <returns>true if it added; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.EnumerateStringValues(Grpc.Core.Metadata)">
+            <summary>
+            Enumerates string values.
+            </summary>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.EnumerateBinaryValues(Grpc.Core.Metadata)">
+            <summary>
+            Enumerates binary values.
+            </summary>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.ToStringDictionary(Grpc.Core.Metadata,System.Boolean)">
+            <summary>
+            Creates a dictionary containing string values.
+            </summary>
+            <param name="metadata"></param>
+            <param name="firstValueWhenKeyDuplicate">A value whether the first found value is considered valid if the key is duplicated.</param>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.ToStringListDictionary(Grpc.Core.Metadata)">
+            <summary>
+            Creates a dictionary containing string values.
+            </summary>
+            <param name="metadata"></param>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.ToBinaryDictionary(Grpc.Core.Metadata,System.Boolean)">
+            <summary>
+            Creates a dictionary containing bytes values.
+            </summary>
+            <param name="metadata"></param>
+            <param name="firstValueWhenKeyDuplicate">A value whether the first found value is considered valid if the key is duplicated.</param>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.MetadataExtensions.ToBinaryListDictionary(Grpc.Core.Metadata)">
+            <summary>
+            Creates a dictionary containing bytes values.
+            </summary>
+            <param name="metadata"></param>
+            <returns>The keys and the values.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.RpcExceptionExtension">
+            <summary>
+            Extention methods of <see cref="T:Grpc.Core.RpcException"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.RpcExceptionExtension.ToDebugString(Grpc.Core.RpcException)">
+            <summary>
+            Creates and returns a string representation of the current exception for debugging.
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.ServerServiceDefinitionExtensions">
+            <summary>
+            Extension methods of <see cref="T:Grpc.Core.ServerServiceDefinition"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ServerServiceDefinitionExtensions.AddStructMethod``2(Grpc.Core.ServerServiceDefinition.Builder,Grpc.Core.Method{``0,``1},mxProject.Helpers.GrpcCore.Extensions.StructUnaryServerMethod{``0,``1})">
+            <summary>
+            Adds a definition for a single request - single response method without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder"></param>
+            <param name="method"></param>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ServerServiceDefinitionExtensions.AddStructMethod``2(Grpc.Core.ServerServiceDefinition.Builder,Grpc.Core.Method{``0,``1},mxProject.Helpers.GrpcCore.Extensions.StructClientStreamingServerMethod{``0,``1})">
+            <summary>
+            Adds a definition for a client streaming method without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder"></param>
+            <param name="method"></param>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ServerServiceDefinitionExtensions.AddStructMethod``2(Grpc.Core.ServerServiceDefinition.Builder,Grpc.Core.Method{``0,``1},mxProject.Helpers.GrpcCore.Extensions.StructServerStreamingServerMethod{``0,``1})">
+            <summary>
+            Adds a definition for a server streaming method without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder"></param>
+            <param name="method"></param>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Extensions.ServerServiceDefinitionExtensions.AddStructMethod``2(Grpc.Core.ServerServiceDefinition.Builder,Grpc.Core.Method{``0,``1},mxProject.Helpers.GrpcCore.Extensions.StructDuplexStreamingServerMethod{``0,``1})">
+            <summary>
+            Adds a definition for a duplex streaming method without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder"></param>
+            <param name="method"></param>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.StructUnaryServerMethod`2">
+            <summary>
+            Server-side handler for unary call without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="request"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.StructClientStreamingServerMethod`2">
+            <summary>
+            Server-side handler for client streaming call without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="requestStream"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.StructServerStreamingServerMethod`2">
+            <summary>
+            Server-side handler for server streaming call without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="request"></param>
+            <param name="responseStream"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Extensions.StructDuplexStreamingServerMethod`2">
+            <summary>
+            Server-side handler for duplex streaming call without type restrictions.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="requestStream"></param>
+            <param name="responseStream"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.Internals.NullSerializerFactory">
+            <summary>
+            Null implementation of <see cref="T:mxProject.Helpers.GrpcCore.Reflection.IRpcSerializerFactory"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.Internals.NullSerializerFactory.mxProject#Helpers#GrpcCore#Reflection#IRpcSerializerFactory#GetSerializer``1">
+            <summary>
+            Gets the serializer for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The serializer.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.Internals.NullSerializerFactory.mxProject#Helpers#GrpcCore#Reflection#IRpcSerializerFactory#GetDeserializer``1">
+            <summary>
+            Gets the deserializer for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The deserializer.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory">
+            <summary>
+            Defines methods that gets or creates <see cref="T:Grpc.Core.Marshaller`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory.GetMarshaller``1">
+            <summary>
+            Gets the marshaller for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The marshaller.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.IRpcSerializerFactory">
+            <summary>
+            Defines methods that gets or creates the serializer.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.IRpcSerializerFactory.GetSerializer``1">
+            <summary>
+            Gets the serializer for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The serializer.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.IRpcSerializerFactory.GetDeserializer``1">
+            <summary>
+            Gets the deserializer for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The deserializer.</returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.RpcIgnoreAttribute">
+            <summary>
+            Indicates that the method should be ignored in the reflection process.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcIgnoreAttribute.#ctor">
+            <summary>
+            Create a new instance.
+            </summary>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory">
+            <summary>
+            Factory class of <see cref="T:Grpc.Core.Marshaller`1"/>.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.#ctor(mxProject.Helpers.GrpcCore.Reflection.IRpcSerializerFactory)">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="serializerFactory">The factory of the serializer.</param>
+        </member>
+        <member name="F:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.DefaultInstance">
+            <summary>
+            Default instance of this type.
+            </summary>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.SerializerFactory">
+            <summary>
+            Gets the factory of the serializer.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.GetMarshaller``1">
+            <summary>
+            Gets the marshaler for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The marshaller.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.TryCreateCustomMarshaller``1(Grpc.Core.Marshaller{``0}@)">
+            <summary>
+            Create the custom marshaller for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <param name="marshaller">The marshaller.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.TryCreateDefaultMarshaller``1(Grpc.Core.Marshaller{``0}@)">
+            <summary>
+            Create the default marshaller for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <param name="marshaller">The marshaller.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.CreateDefaultMarshaller``1">
+            <summary>
+            Create the default marshaller for the specified type.
+            </summary>
+            <typeparam name="T">The type of the data object.</typeparam>
+            <returns>The marshaller.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMarshallerFactory.HasDefaultConstructor(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo">
+            <summary>
+            Information of gRPC method.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.#ctor(Grpc.Core.MethodType,System.Type,System.Type,System.Reflection.MethodInfo,System.Boolean)">
+            <summary>
+            Create a new instance.
+            </summary>
+            <param name="methodType">The gRPC method type.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <param name="handler">The method handler.</param>
+            <param name="ignore">A value whether <see cref="T:mxProject.Helpers.GrpcCore.Reflection.RpcIgnoreAttribute"/> is declared.</param>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.MethodType">
+            <summary>
+            Gets the gRPC method type.
+            </summary>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.RequestType">
+            <summary>
+            Gets the type of the request.
+            </summary>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.ResponseType">
+            <summary>
+            Gets the type of the response.
+            </summary>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.Handler">
+            <summary>
+            Gets the method handler.
+            </summary>
+        </member>
+        <member name="P:mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo.Ignore">
+            <summary>
+            Gets whether <see cref="T:mxProject.Helpers.GrpcCore.Reflection.RpcIgnoreAttribute"/> is declared.
+            </summary>
+        </member>
+        <member name="T:mxProject.Helpers.GrpcCore.Reflection.RpcReflection">
+            <summary>
+            Reflection operation related to gRPC.
+            </summary>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.EnumerateServiceMethods(System.Type,System.Boolean)">
+            <summary>
+            Enumerates the RPC methods implemented in the specified service type.
+            </summary>
+            <param name="serviceImplType">The type of the service.</param>
+            <param name="containsIgnoreMethod">A value whether to include the method declared with <see cref="T:mxProject.Helpers.GrpcCore.Reflection.RpcIgnoreAttribute"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsIgnore(System.Reflection.MethodInfo)">
+            <summary>
+            Gets whether to ignore the specified method.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <returns>true if ignore; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.TryGetServiceMethodInfo(System.Reflection.MethodInfo,Grpc.Core.MethodType@,System.Type@,System.Type@)">
+            <summary>
+            If the specified method is an RPC service method, gets the RPC method information.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <param name="methodType">The gRPC method type.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <returns>true if it is an RPC service method; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsMatchUnaryMethodHandler(System.Reflection.MethodInfo,System.Type@,System.Type@)">
+            <summary>
+            Gets whether the specified method is an unary service method.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <returns>true if it is an unary service method; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsMatchServerStreamingMethodHandler(System.Reflection.MethodInfo,System.Type@,System.Type@)">
+            <summary>
+            Gets whether the specified method is a server streaming service method.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <returns>true if it is a server streaming service method; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsMatchClientStreamingMethodHandler(System.Reflection.MethodInfo,System.Type@,System.Type@)">
+            <summary>
+            Gets whether the specified method is a client streaming service method.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <returns>true if it is a client streaming service method; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsMatchDuplexStreamingMethodHandler(System.Reflection.MethodInfo,System.Type@,System.Type@)">
+            <summary>
+            Gets whether the specified method is a duplex streaming service method.
+            </summary>
+            <param name="methodImpl">The method.</param>
+            <param name="requestType">The type of the request.</param>
+            <param name="responseType">The type of the response.</param>
+            <returns>true if it is a duplex streaming service method; otherwise false.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsServiceRequestStreamType(System.Type)">
+            <summary>
+            Gets whether the specified type represents a request stream.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.IsServiceResponseStreamType(System.Type)">
+            <summary>
+            Gets whether the specified type represents a response stream.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.CreateMethod(System.String,mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <param name="serviceName">The service name.</param>
+            <param name="handler">The method information.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <returns>The method description.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.CreateMethodCore``2(System.String,mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <param name="handler">The method information.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <returns>The method description.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.CreateMethod``2(System.String,System.String,Grpc.Core.MethodType,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <param name="methodName">The method name.</param>
+            <param name="methodType">The RPC method type.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <returns>The method description.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.AddMethod(Grpc.Core.ServerServiceDefinition.Builder,System.String,mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory,System.Object)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <param name="builder">The service builder.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="handler">The method information.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <param name="serviceInstance">The service instance.</param>
+            <returns>The method description.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.AddMethodCore``2(Grpc.Core.ServerServiceDefinition.Builder,System.String,mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory,System.Object)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder">The service builder.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="handler">The method information.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <param name="serviceInstance">The service instance.</param>
+            <returns>The method description.</returns>
+        </member>
+        <member name="M:mxProject.Helpers.GrpcCore.Reflection.RpcReflection.AddStructMethodCore``2(Grpc.Core.ServerServiceDefinition.Builder,System.String,mxProject.Helpers.GrpcCore.Reflection.RpcMethodHandlerInfo,mxProject.Helpers.GrpcCore.Reflection.IRpcMarshallerFactory,System.Object)">
+            <summary>
+            Creates the RPC method description.
+            </summary>
+            <typeparam name="TRequest">The type of the request.</typeparam>
+            <typeparam name="TResponse">The type of the response.</typeparam>
+            <param name="builder">The service builder.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="handler">The method information.</param>
+            <param name="marshallerFactory">The factory of the marshaller.</param>
+            <param name="serviceInstance">The service instance.</param>
+            <returns>The method description.</returns>
+        </member>
+    </members>
+</doc>

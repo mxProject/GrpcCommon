@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
+    <RootNamespace>mxProject</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <Description>gRPC common library for .NET Framework and .NET Standard.</Description>
+    <Version>0.5.0</Version>
+    <Copyright>Copyright 2019 mxProject</Copyright>
+    <PackageLicenseUrl>http://opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mxProject/GrpcCommon</PackageProjectUrl>
+    <PackageTags>gRPC, HTTP2</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>E:\programing\GitHub\mxProject\GrpcCommon\source\mxProject.Helpers.GrpcCommon\mxProject.Helpers.GrpcCommon.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>E:\programing\GitHub\mxProject\GrpcCommon\source\mxProject.Helpers.GrpcCommon\mxProject.Helpers.GrpcCommon.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+    <PackageReference Include="Grpc.Core" Version="1.19.0" />
+  </ItemGroup>
+
+</Project>
