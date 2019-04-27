@@ -90,7 +90,7 @@ namespace mxProject.Helpers.GrpcCore.Reflection
 
             }
 
-            methodType = default(MethodType);
+            methodType = default;
             responseType = null;
             requestType = null;
 

@@ -40,10 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.19.0\lib\net45\Grpc.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.20.1\lib\net45\Grpc.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Grpc.Core.Api, Version=0.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.Api.1.19.0\lib\net45\Grpc.Core.Api.dll</HintPath>
+    <Reference Include="Grpc.Core.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.Api.1.20.1\lib\net45\Grpc.Core.Api.dll</HintPath>
     </Reference>
     <Reference Include="MessagePack, Version=1.7.3.4, Culture=neutral, PublicKeyToken=b4a0369545f0a1be, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\NuGet\.nuget\packages\MessagePack.1.7.3.4\lib\net45\MessagePack.dll</HintPath>
@@ -92,10 +92,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\mxProject.Common\mxProject.Common.csproj">
-      <Project>{22d4606f-994f-4501-afdc-c16aa543d5b2}</Project>
-      <Name>mxProject.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\mxProject.Helpers.GrpcCommon\mxProject.Helpers.GrpcCommon.csproj">
       <Project>{b0a7ae91-d985-41a6-8720-9adcba403d5b}</Project>
       <Name>mxProject.Helpers.GrpcCommon</Name>
@@ -109,8 +105,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.20.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.20.1\build\net45\Grpc.Core.targets'))" />
   </Target>
   <Import Project="..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\..\..\..\..\NuGet\.nuget\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
-  <Import Project="..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets" Condition="Exists('..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.19.0\build\net45\Grpc.Core.targets')" />
+  <Import Project="..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.20.1\build\net45\Grpc.Core.targets" Condition="Exists('..\..\..\..\..\NuGet\.nuget\packages\Grpc.Core.1.20.1\build\net45\Grpc.Core.targets')" />
 </Project>
