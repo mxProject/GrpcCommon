@@ -10,7 +10,7 @@ gRPC common library for .NET Framework and .NET Standard.
 
 * .NET Framework >= 4.6
 * .NET Standard >= 2.0
-* Grpc.Core >= 1.19.0
+* Grpc.Core >= 1.20.1
 
 ## Licence
 
